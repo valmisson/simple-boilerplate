@@ -1,0 +1,30 @@
+{
+  "name": "simple-boilerplate",
+  "version": "0.0.1",
+  "description": "Only a simple boilerplate",
+  "author": "Valmisson Grizorte",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore **/*.{js,ts}"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "eslint": "^8.2.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "lint-staged": "^11.2.6",
+    "typescript": "^4.4.4",
+    "yorkie": "^2.0.0"
+  },
+  "lint-staged": {
+    "**/*.{js,ts}": [
+      "eslint --fix"
+    ]
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  }
+}
